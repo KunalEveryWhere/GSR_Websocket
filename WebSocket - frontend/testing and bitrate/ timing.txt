@@ -1,0 +1,9 @@
+// FOR 10 seconds:; 10bits (for 4 digit number) x 4 bits per second -> ~5 bytes per second
+
+2393;2401;2398;2399;2402;2393;2386;2385;2385;2384;2397;2399;2399;2384;2396;2401;2402;2391;2385;2401;2398;2399;
+2397;2396;2390;2391;2402;2399;2401;2391;2400;2398;2397;2393;2385;2396;2387;2398;2403;
+
+~About 4 data points per second.
+Each data point is 4-digit long integer -> that takes by 10bits of space
+Thus, each second, we sent 10bits x 4 = 40 bits = 5 bytes of data
+Therefore,  ~ 5 bytes per second

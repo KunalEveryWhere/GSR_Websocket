@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>[3] WS - MOFSM v0.1</title>
+        <script type = "text/javascript">
+
+            //Update this
+            //let ip = "172.20.10.11"
+            let ip = "10.240.2.199";
+            let ws = new WebSocket("ws://"+ip+"/ws");
+
+            // function GrabIPFunction(){
+            //     ip = document.getElementById("ipvalue").value;
+            //     //ws = new WebSocket("ws://"+ip+"/ws");
+            //     let temp = "ws://"+ip+"/ws";
+                
+            //     ws = new WebSocket(temp); ws.OPEN;
+            //     console.log(ws);
+            // }
+
+            function Clear(){
+                const textarea = document.getElementById('valueSink');
+                textarea.value = '';
+            }
+
+            function CopyToClipboard(){
+                const textarea = document.getElementById('valueSink');
+                textarea.select();
+                textarea.setSelectionRange(0, 99999); //for Mobile Devices
+                navigator.clipboard.writeText(textarea.value);
+            }
+
+            ws.onopen = function() {
+                alert("Connection opened");
+            };
+     
+            ws.onclose = function() {
+                alert("Connection closed");
+            };
+            
+            ws.onmessage = function(event) {
+                const textarea = document.getElementById('valueSink');
+                textarea.value = textarea.value + event.data;
+            };
+          </script>
+    </head>
+    <body>
+        <div>
+            <center>
+            <h1>WS - MOFSM <code>v0.1</code></h1>
+           <h3>GSR Value Set</h3>
+           <p>Web Socket P2P RT Bandwodth Connection with ESP32S</p>
+        </center>
+        </div>
+        <div>
+            <center>
+           <!-- Enter ESP32S IP: <input type="text" id="ipvalue">
+        <button onclick="">Connect</button> -->
+        <br/> <br/>
+            </center>
+        </div>
+        <div>
+        <center>
+            <textarea rows="30" cols="100" id="valueSink" readonly>
+            </textarea>
+            <br/> <br/> <br/>
+            <button onclick="Clear()">Clear</button>
+            <button onclick="CopyToClipboard()">Copy to Clipboard</button>
+            </center>
+        </div>
+    </body>
+</html>
