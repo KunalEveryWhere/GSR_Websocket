@@ -2,5 +2,4 @@
 
 ![image](https://user-images.githubusercontent.com/65479883/190477938-b3086772-49c5-4f3a-bdf8-bb570b54a786.png)
 
-
-Collaborative mind mapping is a brainstorming technique that enables both creative problem-solving skills and the visualization of information. In real life, however, outside distractions such as group dynamics or environmental factors might distort the results or unnecessarily lengthen the process. By using a Virtual Reality (VR) application, we aim to significantly reduce potential distractions and therefore create an immersive experience that allows collaborators to come up with meaningful results more efficiently and joyfully. In order to thoroughly evaluate the outcome, we measure stress levels through a wearable Galvanic Skin Response Sensor (GSR), as well as rate the perceived immersion through the Igroup Presence Questionnaire (IPQ), before concluding to compare the output of seven collaborative mind mapping sessions (N=24) with regard to the interpersonal interaction in the VR application. This study shall give researchers an insight into the complex relationship between the self-assessed immersion of the users and physical indicator of arousal levels during the collaborative task in VR, before connecting these factors to the output of the mind mapping sessions.
+Codebase for ESP32 and Front-end web-socket
